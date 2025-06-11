@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Cuenta - PictureaPRO</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <main>
+        <div class="left-panel">
+            <h1 class="logo-title"><strong>Picturea</strong>PRO</h1>
+        </div>
+        <div class="right-panel">
+            <form id="signup-form" class="login-container">
+                <h2>CREAR CUENTA</h2>
+
+                <div class="input-group">
+                    <svg class="input-icon" ...></svg>
+                    <input type="email" id="signup-email" placeholder="Correo electrónico" required>
+                </div>
+
+                <div class="input-group">
+                    <svg class="input-icon" ...></svg>
+                    <input type="password" id="signup-password" placeholder="Crear contraseña" required>
+                </div>
+
+                <div class="button-group">
+                    <a href="index.html" class="button-link create-account">VOLVER</a>
+                    <button type="submit" class="login-button">REGISTRARSE</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <script>
+        document.getElementById('signup-form').addEventListener('submit', function (e) {
+            e.preventDefault(); // Prevent form from submitting
+
+            // Get user input
+            const email = document.getElementById('signup-email').value;
+            const password = document.getElementById('signup-password').value;
+
+            // Store the credentials in localStorage
+            localStorage.setItem('userEmail', email);
+            localStorage.setItem('userPassword', password);
+
+            // Notify the user and redirect to the login page
+            alert('¡Cuenta creada con éxito! Ahora puedes iniciar sesión.');
+            window.location.href = 'index.html';
+        });
+    </script>
+</body>
+
+</html>
