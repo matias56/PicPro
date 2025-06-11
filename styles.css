@@ -1,0 +1,212 @@
+/* Ensure the html and body elements have no margin/padding and fill the height */
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: sans-serif;
+}
+
+main {
+    display: flex;
+    /* CHANGE: Set width and height to fill the entire viewport */
+    width: 100vw;
+    /* 100% of viewport width */
+    height: 100vh;
+    /* 100% of viewport height */
+
+    /* REMOVED: max-width and box-shadow are no longer needed for a fullscreen layout */
+}
+
+.left-panel {
+    background-color: #7851a9;
+    /* Purple color from image */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    padding: 20px;
+}
+
+/* NEW: Style for the text logo */
+.logo-title {
+    font-size: 4.5rem;
+    /* Adjust size as needed */
+    color: white;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+/* NEW: Style for the "PRO" part */
+.logo-title strong {
+    font-weight: 900;
+    /* Makes "Picturea" extra bold */
+}
+
+.right-panel {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* This rule also makes the panel take up 50% of the space */
+    flex: 1;
+    padding: 40px;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 400px;
+}
+
+.login-container h2 {
+    color: #333;
+    text-align: left;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+/* MODIFIED: Added left padding to make space for the icon */
+.input-group input {
+    width: 100%;
+    padding: 15px 20px 15px 50px;
+    /* Left padding is now 50px */
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    box-sizing: border-box;
+    transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.input-group input::placeholder {
+    color: #a9a9a9;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #7851a9;
+    box-shadow: 0 0 0 3px rgba(120, 81, 169, 0.25);
+}
+
+/* ADDED: Styles for the new SVG icons */
+.input-icon {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    fill: #a9a9a9;
+    /* Icon color matches placeholder */
+    transition: fill 0.2s ease-in-out;
+    /* Smooth transition for color change */
+}
+
+/* ADDED: Changes icon color to purple when the input is focused */
+.input-group:focus-within .input-icon {
+    fill: #7851a9;
+}
+
+.forgot-password {
+    display: block;
+    text-align: right;
+    margin-bottom: 20px;
+    color: #7851a9;
+    font-size: 0.8em;
+    text-decoration: none;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+.button-group {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+.create-account,
+.login-button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+.create-account {
+    background-color: white;
+    color: #7851a9;
+    border: 2px solid #7851a9;
+}
+
+.login-button {
+    background-color: #7851a9;
+    color: white;
+}
+
+.create-account:hover,
+.login-button:hover {
+    opacity: 0.9;
+}
+
+#password {
+    padding-right: 50px;
+}
+
+/* ADDED: Styles for the eye icon container */
+.eye-toggle {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    display: flex;
+    /* Helps vertically align if needed */
+    align-items: center;
+}
+
+/* ADDED: General styles for both eye icons */
+.eye-icon {
+    width: 22px;
+    height: 22px;
+    fill: #a9a9a9;
+    /* Default color gray */
+    transition: fill 0.2s ease-in-out;
+}
+
+/* ADDED: Make the icon purple when focused */
+.input-group:focus-within .eye-icon {
+    fill: #7851a9;
+}
+
+.error-message {
+    color: #d93025;
+    /* A standard error red color */
+    font-size: 0.9em;
+    text-align: left;
+    margin-top: -10px;
+    /* Pulls it closer to the input fields */
+    margin-bottom: 15px;
+    height: 1em;
+    /* Reserve space to prevent layout shift */
+}
+
+/* ADDED: Styling to make the anchor tag look like a button */
+.button-link {
+    display: inline-block;
+    padding: 12px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 0.9em;
+    font-weight: bold;
+    line-height: normal;
+    /* Ensures text aligns well */
+}
