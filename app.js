@@ -1,3 +1,5 @@
+
+
 document.addEventListener('DOMContentLoaded', function () {
     // --- Password Toggle Logic (remains the same) ---
     const togglePassword = document.getElementById('togglePassword');
@@ -48,3 +50,4 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
+
