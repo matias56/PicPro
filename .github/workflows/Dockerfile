@@ -1,13 +1,7 @@
-services:
-  web:
-    image: nginx:latest
-    ports:
-      - "80:80"
-    volumes:
-      - ./html:/usr/share/nginx/html
-  app:
-    build: ./app
-    ports:
-      - "3000:3000"
-    depends_on:
-      - web
+FROM node:16-alpine
+WORKDIR /app
+COPY package*.json ./
+RUN npm install
+COPY . .
+EXPOSE 3000
+CMD ["npm", "start"]
