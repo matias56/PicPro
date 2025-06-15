@@ -9,6 +9,6 @@ services:
   app:
     build: ./app
     ports:
-      - "3000:3000"
+      - "3000:300"
     depends_on:
       - web
