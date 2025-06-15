@@ -1,0 +1,49 @@
+{
+    "taskDefinitionArn": "arn:aws:ecs:us-east-2:624497741565:task-definition/picpro:1",
+    "containerDefinitions": [
+        {
+            "name": "ppro",
+            "image": "https://pixabay.com/vectors/camera-lens-photography-32871/",
+            "cpu": 0,
+            "portMappings": [],
+            "essential": true,
+            "environment": [],
+            "environmentFiles": [],
+            "mountPoints": [],
+            "volumesFrom": [],
+            "systemControls": []
+        }
+    ],
+    "family": "picpro",
+    "executionRoleArn": "arn:aws:iam::624497741565:role/ecsTaskExecutionRole",
+    "networkMode": "awsvpc",
+    "revision": 1,
+    "volumes": [],
+    "status": "ACTIVE",
+    "requiresAttributes": [
+        {
+            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.18"
+        },
+        {
+            "name": "ecs.capability.task-eni"
+        }
+    ],
+    "placementConstraints": [],
+    "compatibilities": [
+        "EC2",
+        "FARGATE"
+    ],
+    "requiresCompatibilities": [
+        "FARGATE"
+    ],
+    "cpu": "1024",
+    "memory": "3072",
+    "runtimePlatform": {
+        "cpuArchitecture": "X86_64",
+        "operatingSystemFamily": "WINDOWS_SERVER_2022_FULL"
+    },
+    "registeredAt": "2025-06-15T22:43:17.179Z",
+    "registeredBy": "arn:aws:iam::624497741565:root",
+    "enableFaultInjection": false,
+    "tags": []
+}
