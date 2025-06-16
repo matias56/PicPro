@@ -96,7 +96,7 @@ jobs:
       id: render-task-def
       uses: aws-actions/amazon-ecs-render-task-definition@v1
       with:
-        task-definition: picpro-revision3.json
+        task-definition: .github/workflows/picpro-revision3.json
         container-name: picturea
         image: ${{ steps.build-image.outputs.image }}
 
