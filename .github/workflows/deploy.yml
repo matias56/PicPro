@@ -92,3 +92,17 @@ jobs:
         service: ${{ env.ECS_SERVICE }}
         cluster: ${{ env.ECS_CLUSTER }}
         wait-for-service-stability: true
+    - name: Download task definition
+        run: |
+          aws ecs describe-task-definition --task-definition **your task defination name** --query taskDefinition > taskdefinition.json
+
+    - name: new image in ECS taskdefinition
+        id: demo
+        uses: aws-actions/amazon-ecs-render-task-definition@v1
+        with:
+          task-definition: taskdefinition.json
+          container-name: pictureapro
+          image: ${{ steps.check_files.outputs.**image** }}
+          
+    - name: updating task-definition file
+        run: cat ${{ steps.demo.outputs.task-definition }} > taskdefinition.json
