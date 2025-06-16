@@ -99,3 +99,10 @@ jobs:
         task-definition: picpro-revision3.json
     - name: List files in repository
       run: ls -R
+    - name: Deploy Amazon ECS task definition
+      uses: aws-actions/amazon-ecs-deploy-task-definition@v1
+      with:
+        task-definition: ${{ steps.render-task-def.outputs.task-definition-arn }}
+        service: S3 # <-- Replace 'S3' with the correct name from the AWS console
+        cluster: pictureapro_cluster
+        wait-for-service-stability: true
