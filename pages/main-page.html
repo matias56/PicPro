@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - PictureaPRO</title>
+    <!-- We use the same stylesheet -->
+    <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+
+    <div class="dashboard-container">
+
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <h1 class="sidebar-logo"><strong>Picturea</strong>PRO</h1>
+            </div>
+
+            <div class="sidebar-profile">
+                <div class="profile-info">
+
+                </div>
+                <a href="#" class="profile-edit-btn">
+                    <!-- Edit Icon SVG -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                        <path fill="currentColor"
+                            d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83l3.75 3.75l1.83-1.83z" />
+                    </svg>
+                </a>
+            </div>
+
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="active">
+                        <a href="#" class="sidebar-link" data-target="inicio-content.html"> <svg
+                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path fill="currentColor" d="M10 20v-6h4v6h5v-8h3L12 3L2 12h3v8h5z" />
+                            </svg>
+                            <span>Inicio</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="sidebar-link" data-target="clientes.html">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path fill="currentColor"
+                                    d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05c1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z" />
+                            </svg>
+                            <span>Clientes</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-dropdown">
+
+                        <a href="#" class="dropdown-btn"><span><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                    height="24" viewBox="0 0 24 24">
+                                    <path fill="currentColor"
+                                        d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2s-.9-2-2-2zM1 2v2h2l3.6 7.59l-1.35 2.44C4.52 15.37 5.48 17 7 17h12v-2H7l1.1-2h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1.003 1.003 0 0 0 20 4H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.9 2 1.99 2s2-.9 2-2s-.9-2-2-2z" />
+                                </svg> Productos</span>
+                            </span> <span class="arrow">&#9660;</a>
+                        <!-- Arrow Icon -->
+
+                        </a>
+                        <div class="dropdown-container">
+
+                            <ul class="submenu">
+                                <li>
+                                    <a href="#">
+                                        <!-- Re-used cart icon -->
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24">
+                                            <path fill="currentColor"
+                                                d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2s-.9-2-2-2zM1 2v2h2l3.6 7.59l-1.35 2.44C4.52 15.37 5.48 17 7 17h12v-2H7l1.1-2h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1.003 1.003 0 0 0 20 4H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.9 2 1.99 2s2-.9 2-2s-.9-2-2-2z" />
+                                        </svg>
+                                        <span>Productos</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <!-- New "Photo" Icon -->
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24">
+                                            <path fill="currentColor"
+                                                d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z" />
+                                        </svg>
+                                        <span>Materiales</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path fill="currentColor"
+                                    d="M20.5 5.5c-4.69 0-8.5 3.81-8.5 8.5h-2C10 7.81 14.81 3 20.5 3c1.94 0 3.7.67 5.12 1.74l-1.43 1.43c-1.01-.69-2.22-1.17-3.69-1.17zM22 14h-2c0 3.59-2.91 6.5-6.5 6.5c-1.47 0-2.88-.49-4.07-1.3l-1.43 1.43C9.37 21.43 11.06 22 13 22c4.97 0 9-4.03 9-9zM4.41 2.86L3 4.27l6.53 6.53h-.03c-2.05 0-3.88.8-5.26 2.2l1.42 1.42C6.9 13.19 8.6 12.5 10.5 12.5h.03L12 13.97V14h.03l7.73 7.73l1.41-1.41L4.41 2.86z" />
+                            </svg>
+                            <span>Servicios</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path fill="currentColor"
+                                    d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z" />
+                            </svg>
+                            <span>Calendarios</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path fill="currentColor"
+                                    d="M22 16V4c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2zm-11-4l2.03 2.71L16 11l4 5H8l3-4zM2 6v14c0 1.1.9 2 2 2h14v-2H4V6H2z" />
+                            </svg>
+                            <span>Galerías</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path fill="currentColor"
+                                    d="M14 10H2v2h12v-2zm0-4H2v2h12V6zm4 8v-2h-2v2h2zm0-4v-2h-2v2h2zm0-4V6h-2v2h2zm2-6v20h-2V2h2zM2 16h8v-2H2v2z" />
+                            </svg>
+                            <span>Plantillas</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path fill="currentColor"
+                                    d="M4 10h12v2H4zM4 6h12v2H4zm0 8h8v2H4zM20.15 15.37l-2.52 2.52c-.39.39-1.02.39-1.41 0L14.4 16.07a1.017 1.017 0 0 1 .22-1.49c.87-.69 1.38-1.74 1.38-2.9C16 9.43 14.57 8 12.75 8S9.5 9.43 9.5 11.25c0 .35.05.69.14 1.02l-1.6 1.6C8.02 13.54 8 13.17 8 12.79c0-2.61 2.11-4.75 4.75-4.75S17.5 10.18 17.5 12.8c0 1.4-.6 2.67-1.57 3.54l1.81 1.81c.39.39 1.02.39 1.41 0l2.52-2.52a.9959.9959 0 0 0 0-1.41c-.39-.39-1.03-.39-1.42 0z" />
+                            </svg>
+                            <span>Facturas</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path fill="currentColor"
+                                    d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z" />
+                            </svg>
+                            <span>Contratos</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path fill="currentColor"
+                                    d="M19.43 12.98c.04-.32.07-.64.07-.98s-.03-.66-.07-.98l2.11-1.65c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.3-.61-.22l-2.49 1c-.52-.4-1.08-.73-1.69-.98l-.38-2.65C14.46 2.18 14.25 2 14 2h-4c-.25 0-.46.18-.49.42l-.38 2.65c-.61.25-1.17.59-1.69.98l-2.49-1c-.23-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64l2.11 1.65c-.04.32-.07.65-.07.98s.03.66.07.98l-2.11 1.65c-.19.15-.24.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1c.52.4 1.08.73 1.69.98l.38 2.65c.03.24.24.42.49.42h4c.25 0 .46-.18.49-.42l.38-2.65c.61-.25 1.17-.59 1.69-.98l2.49 1c.23.09.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.65zM12 15.5c-1.93 0-3.5-1.57-3.5-3.5s1.57-3.5 3.5-3.5s3.5 1.57 3.5 3.5s-1.57 3.5-3.5 3.5z" />
+                            </svg>
+                            <span>Mi cuenta</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+
+                <button id="hide-sidebar-btn" class="sidebar-hide-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
+                    </svg>
+                    <span>Ocultar</span>
+                </button>
+                <button id="unhide-sidebar-btn" class="unhide-sidebar-btn hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                    <span>Mostrar</span>
+                </button>
+            </div>
+        </aside>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content" id="main-content">
+            <div id="content-container">
+
+
+                <div id="inicio-content" class="content-section">
+                    <h1>Inicio</h1>
+                    <div class="content-body">
+                        <!-- Page content goes here -->
+                        <p> <br>¡Bienvenido a PictureaPRO! El servicio número 1 en pedidos de realización de fotografías
+                            y
+                            portfolios fotográficos.</p>
+                        <p>Puedes visitar nuestra sección de Clientes para ver cuantos han confiado en nuestro sistema
+                            de
+                            manejo
+                            de la red y en los productos y servicios.</p>
+                        <p>Nuestros Productos y Materiales son aquellos que puedes seleccionar de base para tus
+                            fotografías
+                            deseadas.</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <script src="../app.js"></script>
+</body>
+
+</html>
